@@ -20,7 +20,7 @@ Para dar solucion al examen, se desarrollo con las siguientes caracteristicas:
 2) Se agrego flywar, para la gestion y versionado de la db.
 3) Se agregaron test Unitarios, y test de integracion, lavantando una base de datos en memoria y precardado los datos con flyway
 4) La convertura de test fue de 90%, el reporte generado se encuenta en **/target/site/jacoco/index.html, para generarlo
-> mvn verify
+> mvn clean package verify
 5) Se agrego documentacion de la api, la cual esta disponible al levantar el servicios en http://localhost:8080/swagger-ui/index.html
 6) Se creo archivo Dockerfile para levantar la aplicacion
 > docker build -t mindata:0.0.1 .
