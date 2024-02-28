@@ -35,11 +35,11 @@ public class AuthenticationController {
     private final AuthenticationService authenticationService;
 
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Register user", content = @Content(array = @ArraySchema(schema = @Schema(implementation = JwtAuthenticationResponse.class)))),
+            @ApiResponse(responseCode = "200", description = "Register user", content = @Content(array = @ArraySchema(schema = @Schema(implementation = ResponseDto.class)))),
             @ApiResponse(responseCode = "403", description = "User already exists", content = @Content(schema = @Schema(implementation = ResponseDto.class)))
     })
     @PostMapping(SINGUP)
-    public ResponseEntity<JwtAuthenticationResponse> signup(@Valid @RequestBody SignUpRequest request) {
+    public ResponseEntity<ResponseDto> signup(@Valid @RequestBody SignUpRequest request) {
         return ResponseEntity.ok(authenticationService.signup(request));
     }
 
