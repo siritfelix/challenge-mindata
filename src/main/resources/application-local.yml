@@ -1,0 +1,29 @@
+spring:
+  jpa:
+    database-platform: ${DB_PLATFORM}
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  datasource:
+      url: jdbc:h2:mem:testdb
+      username: root
+      password: password
+  h2:
+    console:
+      enabled: true
+flyway:
+  url: jdbc:h2:mem:testdb
+  user: root
+  password: password
+  schemas: testdb
+token:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+ms:
+  messages:
+    OK: respuesta exitosa
+    BR400: Error en el request
+    E500: Error interno
+    F401: No se encontro el superheroe con id=
+    E403: No autorizado
+    E409: Ya existe un usuario con el email=
