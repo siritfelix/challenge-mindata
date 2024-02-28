@@ -13,7 +13,7 @@ Pasos para levantar la aplicacion:
 1) Ejecutar el comando: 
 > mvn clean package
 2) En local se puede levantar con: 
->mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=local
+>mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=local"
 
 Para dar solucion al examen, se desarrollo con las siguientes caracteristicas:
 1) En el desarrollo se aplico arquitectura hexagonal, compuesto por la capa de: application, domain, infrastructure y shared.
@@ -23,7 +23,7 @@ Para dar solucion al examen, se desarrollo con las siguientes caracteristicas:
 > mvn verify
 5) Se agrego documentacion de la api, la cual esta disponible al levantar el servicios en http://localhost:8080/swagger-ui/index.html
 6) Se creo archivo Dockerfile para levantar la aplicacion
-> build -t mindata:0.0.1 .
+> docker build -t mindata:0.0.1 .
 >
 > docker run -d -p 8080:8080 --name mi_contenedor mindata:0.0.1
 7) Importar las colecciones de postman /postman/**

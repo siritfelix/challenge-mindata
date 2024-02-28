@@ -34,7 +34,7 @@ public class SuperHeroEntity {
 
     private String name;
 
-    @OneToMany(mappedBy = "superHero", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "superHero", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = false)
     @JsonManagedReference
     private List<SuperHeroSkillEntity> skills;
 

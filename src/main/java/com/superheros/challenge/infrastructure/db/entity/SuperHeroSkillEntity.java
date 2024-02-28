@@ -28,7 +28,7 @@ public class SuperHeroSkillEntity {
     private Integer id;
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
     private SuperHeroEntity superHero;
 

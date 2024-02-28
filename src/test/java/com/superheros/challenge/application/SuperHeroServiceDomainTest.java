@@ -14,6 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.superheros.challenge.TestUtil;
 import com.superheros.challenge.infrastructure.db.repository.SuperHeroRepository;
+import com.superheros.challenge.infrastructure.db.repository.SuperHeroSkillRepository;
 import com.superheros.challenge.infrastructure.rest.converter.SuperHeroConverter;
 import com.superheros.challenge.shared.config.MenssageResponse;
 import com.superheros.challenge.shared.exception.NotFoundException;
@@ -23,6 +24,8 @@ public class SuperHeroServiceDomainTest {
 
     @Mock
     private SuperHeroRepository superHeroRepository;
+    @Mock
+    private SuperHeroSkillRepository superHeroSkillRepository;
     @Mock
     private MenssageResponse menssageResponse;
 
