@@ -41,7 +41,7 @@ VALUES
 INSERT INTO
     superheroskills (description, super_hero_id)
 VALUES
-    ('Respiracion bajo el agua', 3);
+    ('Respirarion bajo el agua', 3);
 
 INSERT INTO
     superheroskills (description, super_hero_id)

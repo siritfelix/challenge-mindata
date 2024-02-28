@@ -1,6 +1,6 @@
 spring:
   jpa:
-    database-platform: ${DB_PLATFORM}
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: none
     show-sql: true
@@ -12,10 +12,10 @@ spring:
     console:
       enabled: true
 flyway:
+  url: jdbc:h2:mem:testdb
   user: root
   password: password
   schemas: testdb
-  url: jdbc:h2:mem:testdb
 token:
   signing:
     key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
